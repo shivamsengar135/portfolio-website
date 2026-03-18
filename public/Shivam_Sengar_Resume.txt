@@ -1,0 +1,33 @@
+Shivam Sengar
+M.Tech CSE (Artificial Intelligence)
+Defence Institute of Advanced Technology, Pune
+Email: shivamswngar4321@gmail.com
+Phone: +91 7599245115
+Location: Aligarh, Uttar Pradesh
+
+Education
+- M.Tech CSE (AI), DIAT Pune (2023-25), CGPA: 8.18
+- B.Tech CSE, KMCLU Lucknow (2019-23), CGPA: 9.24
+- Class 12, Kendriya Vidyalaya Aligarh (2018): 72.2%
+- Class 10, Kendriya Vidyalaya Lalgarh Jattan (2016): 10 CGPA
+
+Experience
+- ML Engineer Trainee, Upscalers Technology (Jan 2026 - Present)
+- Assistant Professor Grade 1, Presidency University (Jul 2025 - Jan 2026)
+- AI Intern, DIPR DRDO (Jul 2024 - Dec 2025)
+- Backend Developer, Founder Code Technology Pvt Ltd (Dec 2022 - May 2023)
+
+Projects
+- Sound Identification and Classification in Real Time
+- SMACS IoT Project
+- School Management System
+
+Publications
+- Classification of Urban Sound using Custom 1D and 2D CNN Architectures
+  DOI: 10.56975/ijrti.v10i6.204539
+- AI Incident Response Playbook Generator (Accepted, IEEE IATMSI 2026)
+
+Profiles
+- GitHub: https://github.com/shivamsengar135
+- LinkedIn: https://www.linkedin.com/in/shivamsengar135/
+- HackerRank: https://www.hackerrank.com/profile/shivamswngar4321

@@ -57,23 +57,31 @@ export default function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5"
+              className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/10"
             >
-              <div className="bg-gradient-to-br from-blue-500 via-cyan-400 to-purple-500 p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-950/80">Project {index + 1}</p>
-                <h3 className="mt-3 text-2xl font-bold text-white">{project.title}</h3>
-                <p className="mt-2 text-sm text-blue-50">{project.subtitle}</p>
-                <p className="mt-4 inline-flex rounded-full bg-slate-950/30 px-3 py-1 text-sm text-white">
-                  {project.period}
-                </p>
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.18),_transparent_45%)]" />
+              <div className="relative border-b border-white/10 bg-gradient-to-br from-slate-900 via-blue-950/60 to-purple-950/50 p-6">
+                <div className="mb-4 flex items-center justify-between">
+                  <p className="rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
+                    Project {index + 1}
+                  </p>
+                  <p className="rounded-full border border-white/20 bg-slate-950/50 px-3 py-1 text-xs font-semibold text-slate-200">
+                    {project.period}
+                  </p>
+                </div>
+                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                <p className="mt-2 text-sm text-slate-300">{project.subtitle}</p>
               </div>
 
-              <div className="p-6">
+              <div className="relative p-6">
                 <p className="mb-5 leading-7 text-slate-300">{project.description}</p>
 
                 <ul className="mb-6 space-y-3 text-sm leading-6 text-slate-400">
                   {project.points.map((point) => (
-                    <li key={point} className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3">
+                    <li
+                      key={point}
+                      className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 transition group-hover:border-cyan-300/20"
+                    >
                       {point}
                     </li>
                   ))}
@@ -83,7 +91,7 @@ export default function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-100"
+                      className="rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-100"
                     >
                       {tag}
                     </span>

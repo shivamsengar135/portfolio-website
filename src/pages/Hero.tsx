@@ -1,7 +1,9 @@
 import profilePhoto from '../assets/photo.jpg'
-import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
+import { FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 
 export default function Hero() {
+  const resumeUrl = `${import.meta.env.BASE_URL}Shivam_Sengar_Resume.txt`
+
   return (
     <section className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-16">
       <div className="w-full max-w-6xl">
@@ -39,6 +41,13 @@ export default function Hero() {
                 View Projects
               </a>
               <a
+                href={resumeUrl}
+                download
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-500/10 px-7 py-3 font-semibold text-emerald-200 transition hover:bg-emerald-500/20"
+              >
+                <FaDownload /> Download Resume
+              </a>
+              <a
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-full border border-blue-300/40 px-7 py-3 font-semibold text-blue-200 transition hover:bg-blue-500/10"
               >
@@ -48,12 +57,19 @@ export default function Hero() {
           </div>
 
           <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/80 p-6">
-            <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-900/60">
-              <img
-                src={profilePhoto}
-                alt="Portrait of Shivam Sengar"
-                className="h-72 w-full object-cover object-top"
-              />
+            <div className="mb-6 rounded-[1.5rem] border border-white/10 bg-slate-900/60 p-4">
+              <div className="mx-auto w-fit rounded-full bg-gradient-to-br from-blue-500/40 via-cyan-400/20 to-purple-500/30 p-2 shadow-[0_0_60px_rgba(56,189,248,0.25)]">
+                <div className="overflow-hidden rounded-full border border-white/20">
+                  <img
+                    src={profilePhoto}
+                    alt="Portrait of Shivam Sengar"
+                    className="h-64 w-64 object-cover object-top md:h-72 md:w-72"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mb-6 overflow-hidden rounded-2xl border border-emerald-300/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200">
+              Tip: use the Resume button to download my latest profile.
             </div>
             <h2 className="mb-6 text-2xl font-bold text-white">Quick Profile</h2>
             <div className="space-y-4 text-slate-300">
