@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { FaArrowRight, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 export default function Hero() {
@@ -22,18 +21,18 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link
-            to="/projects"
+          <a
+            href="#projects"
             className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
           >
             View My Work <FaArrowRight />
-          </Link>
-          <Link
-            to="/contact"
+          </a>
+          <a
+            href="#contact"
             className="inline-flex items-center gap-2 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition duration-300"
           >
             Get In Touch
-          </Link>
+          </a>
         </div>
 
         {/* Social Links */}

@@ -1,4 +1,4 @@
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 export default function Projects() {
   const projects = [
@@ -9,7 +9,7 @@ export default function Projects() {
       tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       github: 'https://github.com',
       live: 'https://example.com',
-      image: '🛍️'
+      image: 'Shop',
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export default function Projects() {
       tags: ['React', 'Firebase', 'Tailwind', 'WebSockets'],
       github: 'https://github.com',
       live: 'https://example.com',
-      image: '✓'
+      image: 'Task',
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ export default function Projects() {
       tags: ['React', 'Node.js', 'OpenAI', 'Express'],
       github: 'https://github.com',
       live: 'https://example.com',
-      image: '💬'
+      image: 'AI',
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ export default function Projects() {
       tags: ['React', 'D3.js', 'TypeScript', 'Redux'],
       github: 'https://github.com',
       live: 'https://example.com',
-      image: '📊'
+      image: 'Data',
     },
     {
       id: 5,
@@ -45,7 +45,7 @@ export default function Projects() {
       tags: ['React', 'OpenWeather API', 'Tailwind'],
       github: 'https://github.com',
       live: 'https://example.com',
-      image: '🌤️'
+      image: 'Weather',
     },
     {
       id: 6,
@@ -54,50 +54,46 @@ export default function Projects() {
       tags: ['React', 'Firebase', 'Authentication'],
       github: 'https://github.com',
       live: 'https://example.com',
-      image: '📱'
-    }
+      image: 'Social',
+    },
   ]
 
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+    <section className="px-4 py-20">
+      <div className="mx-auto max-w-6xl">
+        <h1 className="mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
           My Projects
         </h1>
-        <p className="text-gray-400 mb-12 text-lg">Explore some of my recent work and side projects</p>
+        <p className="mb-12 text-lg text-gray-400">Explore some of my recent work and side projects</p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-400 transition group"
+              className="group overflow-hidden rounded-lg border border-gray-700 bg-gray-800/50 transition hover:border-blue-400"
             >
-              {/* Project Image/Icon */}
-              <div className="h-40 bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-6xl group-hover:scale-110 transition">
+              <div className="flex h-40 items-center justify-center bg-gradient-to-br from-blue-500 to-purple-500 text-4xl font-bold group-hover:scale-110 transition">
                 {project.image}
               </div>
 
-              {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
+                <h3 className="mb-2 text-xl font-bold text-white">{project.title}</h3>
+                <p className="mb-4 text-sm text-gray-400">{project.description}</p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="mb-4 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs bg-gray-700 text-blue-400 px-2 py-1 rounded">
+                    <span key={tag} className="rounded bg-gray-700 px-2 py-1 text-xs text-blue-400">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                {/* Links */}
                 <div className="flex gap-4">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition"
+                    className="flex items-center gap-2 text-gray-400 transition hover:text-blue-400"
                   >
                     <FaGithub /> GitHub
                   </a>
@@ -105,7 +101,7 @@ export default function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition"
+                    className="flex items-center gap-2 text-gray-400 transition hover:text-blue-400"
                   >
                     <FaExternalLinkAlt /> Live
                   </a>

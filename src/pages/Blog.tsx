@@ -110,7 +110,7 @@ export default function Blog() {
               </div>
 
               {/* Excerpt */}
-              <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
+              <p className="text-gray-300 mb-4 leading-relaxed">{post.excerpt}</p>
 
               {/* Read More Link */}
               <div className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition cursor-pointer">
