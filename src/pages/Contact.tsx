@@ -3,8 +3,8 @@ import { SiHackerrank } from 'react-icons/si'
 
 const links = [
   { label: 'GitHub', href: 'https://github.com/shivamsengar135', icon: FaGithub },
-  { label: 'LinkedIn', href: '#', icon: FaLinkedin },
-  { label: 'HackerRank', href: '#', icon: SiHackerrank },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shivamsengar135/', icon: FaLinkedin },
+  { label: 'HackerRank', href: 'https://www.hackerrank.com/profile/shivamswngar4321', icon: SiHackerrank },
 ]
 
 export default function Contact() {
@@ -64,9 +64,6 @@ export default function Contact() {
               </a>
             ))}
           </div>
-          <p className="mt-5 text-sm text-slate-500">
-            Add your LinkedIn and HackerRank profile URLs here when you are ready.
-          </p>
         </div>
       </div>
     </section>

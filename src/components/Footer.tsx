@@ -40,7 +40,9 @@ export default function Footer() {
                 <FaGithub />
               </a>
               <a
-                href="#contact"
+                href="https://www.linkedin.com/in/shivamsengar135/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition text-2xl"
                 aria-label="LinkedIn"
               >

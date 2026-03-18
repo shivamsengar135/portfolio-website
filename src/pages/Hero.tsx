@@ -82,7 +82,9 @@ export default function Hero() {
                 <FaGithub /> GitHub
               </a>
               <a
-                href="#contact"
+                href="https://www.linkedin.com/in/shivamsengar135/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 transition hover:border-blue-400 hover:text-blue-300"
               >
                 <FaLinkedin /> LinkedIn
