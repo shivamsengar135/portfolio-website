@@ -1,4 +1,4 @@
-import profilePhoto from '../../photo.jpg'
+import profilePhoto from '../assets/photo.jpg'
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 
 export default function Hero() {
