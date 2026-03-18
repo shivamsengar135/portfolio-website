@@ -1,3 +1,4 @@
+import profilePhoto from '../../photo.jpg'
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 
 export default function Hero() {
@@ -9,7 +10,7 @@ export default function Hero() {
             <p className="mb-4 inline-flex rounded-full border border-blue-400/40 bg-blue-500/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
               M.Tech CSE (Artificial Intelligence)
             </p>
-            <h1 className="mb-5 bg-gradient-to-r from-white via-blue-100 to-purple-300 bg-clip-text text-5xl font-black tracking-tight text-transparent md:text-7xl">
+            <h1 className="mb-5 pb-2 leading-[1.08] bg-gradient-to-r from-white via-blue-100 to-purple-300 bg-clip-text text-5xl font-black tracking-tight text-transparent md:text-7xl">
               Shivam Sengar
             </h1>
             <p className="mb-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
@@ -47,6 +48,13 @@ export default function Hero() {
           </div>
 
           <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/80 p-6">
+            <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-900/60">
+              <img
+                src={profilePhoto}
+                alt="Portrait of Shivam Sengar"
+                className="h-72 w-full object-cover object-top"
+              />
+            </div>
             <h2 className="mb-6 text-2xl font-bold text-white">Quick Profile</h2>
             <div className="space-y-4 text-slate-300">
               <div className="flex items-start gap-3">
