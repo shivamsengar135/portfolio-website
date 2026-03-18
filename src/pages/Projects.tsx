@@ -1,113 +1,96 @@
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+const projects = [
+  {
+    title: 'Sound Identification and Classification in Real Time',
+    subtitle: 'M.Tech Final Year Project',
+    period: 'Dec 2024',
+    description:
+      'Processes live CCTV, video, or audio input to detect a defined sound class and count how many times it occurs in the raw audio stream.',
+    points: [
+      'Built around the UrbanSound8K dataset with 8732 labeled sound clips across 10 urban sound classes.',
+      'Focused on real-time inference for sound-event monitoring and analysis.',
+      'Further enhancement under the supervision of Dr. Sunita Dhavale.',
+    ],
+    tags: ['Python', 'Deep Learning', 'UrbanSound8K', 'Audio Classification', 'AI'],
+  },
+  {
+    title: 'SMACS IoT Project',
+    subtitle: 'M.Tech 2nd Semester Mini Project',
+    period: 'Apr 2024',
+    description:
+      'Created a Smart Monitoring and Control System using IoT for real-time monitoring and efficient device control.',
+    points: [
+      'Integrated ThingSpeak for live monitoring and visualization.',
+      'Used Python, IoT sensors, and analytics workflows for data management.',
+      'Designed for practical resource utilization and monitoring use cases.',
+    ],
+    tags: ['IoT', 'ThingSpeak', 'Python', 'Sensors', 'Data Visualization'],
+  },
+  {
+    title: 'School Management System',
+    subtitle: 'B.Tech Final Year Project',
+    period: 'Apr 2024',
+    description:
+      'Developed a web platform to streamline administrative tasks for educational institutions.',
+    points: [
+      'Implemented student and teacher management, attendance tracking, and academic records.',
+      'Built with HTML, CSS, JavaScript, Bootstrap, PHP, CodeIgniter3, and MySQL.',
+      'Aligned closely with real institutional workflow needs.',
+    ],
+    tags: ['PHP', 'CodeIgniter3', 'MySQL', 'Bootstrap', 'Web Development'],
+  },
+]
 
 export default function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce platform with product catalog, shopping cart, and payment integration.',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      image: 'Shop',
-    },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates and team collaboration features.',
-      tags: ['React', 'Firebase', 'Tailwind', 'WebSockets'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      image: 'Task',
-    },
-    {
-      id: 3,
-      title: 'AI Chat Assistant',
-      description: 'Intelligent chat assistant powered by OpenAI API with conversation memory and custom prompts.',
-      tags: ['React', 'Node.js', 'OpenAI', 'Express'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      image: 'AI',
-    },
-    {
-      id: 4,
-      title: 'Data Visualization Dashboard',
-      description: 'Interactive dashboard with real-time data visualization and analytics for business metrics.',
-      tags: ['React', 'D3.js', 'TypeScript', 'Redux'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      image: 'Data',
-    },
-    {
-      id: 5,
-      title: 'Weather App',
-      description: 'Real-time weather application with location-based forecasts and beautiful UI.',
-      tags: ['React', 'OpenWeather API', 'Tailwind'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      image: 'Weather',
-    },
-    {
-      id: 6,
-      title: 'Social Media Feed',
-      description: 'Social media platform with posts, comments, likes, and user profiles.',
-      tags: ['React', 'Firebase', 'Authentication'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      image: 'Social',
-    },
-  ]
-
   return (
     <section className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
-        <h1 className="mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
-          My Projects
-        </h1>
-        <p className="mb-12 text-lg text-gray-400">Explore some of my recent work and side projects</p>
+        <div className="mb-12 max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Projects</p>
+          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Selected projects from AI, IoT, and web development</h2>
+          <p className="text-lg leading-8 text-slate-300">
+            These projects reflect my work across real-time AI systems, connected devices, and full-stack software for
+            practical use cases.
+          </p>
+        </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="group overflow-hidden rounded-lg border border-gray-700 bg-gray-800/50 transition hover:border-blue-400"
+        <div className="grid gap-6 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <article
+              key={project.title}
+              className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5"
             >
-              <div className="flex h-40 items-center justify-center bg-gradient-to-br from-blue-500 to-purple-500 text-4xl font-bold group-hover:scale-110 transition">
-                {project.image}
+              <div className="bg-gradient-to-br from-blue-500 via-cyan-400 to-purple-500 p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-950/80">Project {index + 1}</p>
+                <h3 className="mt-3 text-2xl font-bold text-white">{project.title}</h3>
+                <p className="mt-2 text-sm text-blue-50">{project.subtitle}</p>
+                <p className="mt-4 inline-flex rounded-full bg-slate-950/30 px-3 py-1 text-sm text-white">
+                  {project.period}
+                </p>
               </div>
 
               <div className="p-6">
-                <h3 className="mb-2 text-xl font-bold text-white">{project.title}</h3>
-                <p className="mb-4 text-sm text-gray-400">{project.description}</p>
+                <p className="mb-5 leading-7 text-slate-300">{project.description}</p>
 
-                <div className="mb-4 flex flex-wrap gap-2">
+                <ul className="mb-6 space-y-3 text-sm leading-6 text-slate-400">
+                  {project.points.map((point) => (
+                    <li key={point} className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="rounded bg-gray-700 px-2 py-1 text-xs text-blue-400">
+                    <span
+                      key={tag}
+                      className="rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-100"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
-
-                <div className="flex gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-400 transition hover:text-blue-400"
-                  >
-                    <FaGithub /> GitHub
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-400 transition hover:text-blue-400"
-                  >
-                    <FaExternalLinkAlt /> Live
-                  </a>
-                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

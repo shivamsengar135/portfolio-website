@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -9,9 +9,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Footer */}
           <div>
-            <h3 className="text-xl font-bold text-blue-400 mb-4">Shiva</h3>
+            <h3 className="text-xl font-bold text-blue-400 mb-4">Shivam Sengar</h3>
             <p className="text-gray-400">
-              A passionate developer creating modern web experiences with clean code and great design.
+              AI engineer, researcher, and educator focused on machine learning, computer vision, and applied systems.
             </p>
           </div>
 
@@ -21,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li><a href="#about" className="hover:text-blue-400 transition">About</a></li>
               <li><a href="#projects" className="hover:text-blue-400 transition">Projects</a></li>
-              <li><a href="#blog" className="hover:text-blue-400 transition">Blog</a></li>
+              <li><a href="#blog" className="hover:text-blue-400 transition">Publications</a></li>
               <li><a href="#contact" className="hover:text-blue-400 transition">Contact</a></li>
             </ul>
           </div>
@@ -31,7 +31,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/shivamsengar135"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition text-2xl"
@@ -40,25 +40,14 @@ export default function Footer() {
                 <FaGithub />
               </a>
               <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="text-gray-400 hover:text-blue-400 transition text-2xl"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition text-2xl"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="mailto:your.email@example.com"
+                href="mailto:shivamswngar4321@gmail.com"
                 className="text-gray-400 hover:text-blue-400 transition text-2xl"
                 aria-label="Email"
               >
@@ -71,7 +60,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-800 pt-8">
           <p className="text-center text-gray-400">
-            &copy; {currentYear} Shiva. All rights reserved.
+            &copy; {currentYear} Shivam Sengar. All rights reserved.
           </p>
         </div>
       </div>

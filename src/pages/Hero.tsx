@@ -1,67 +1,109 @@
-import { FaArrowRight, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 
 export default function Hero() {
   return (
-    <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4">
-      <div className="max-w-4xl w-full text-center">
-        {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-          Hi, I'm Shiva
-        </h1>
+    <section className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-16">
+      <div className="w-full max-w-6xl">
+        <div className="grid gap-10 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-blue-950/20 backdrop-blur md:grid-cols-[1.3fr_0.9fr] md:p-12">
+          <div>
+            <p className="mb-4 inline-flex rounded-full border border-blue-400/40 bg-blue-500/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+              M.Tech CSE (Artificial Intelligence)
+            </p>
+            <h1 className="mb-5 bg-gradient-to-r from-white via-blue-100 to-purple-300 bg-clip-text text-5xl font-black tracking-tight text-transparent md:text-7xl">
+              Shivam Sengar
+            </h1>
+            <p className="mb-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+              AI-focused engineer, educator, and developer with experience across machine learning, computer vision,
+              IoT, and backend systems. Currently pursuing M.Tech at DIAT Pune and working on real-world AI
+              applications including sound classification, detection systems, and incident-response automation.
+            </p>
 
-        {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-gray-400 mb-8">
-          A full-stack developer passionate about building beautiful, scalable web applications
-        </p>
+            <div className="mb-8 flex flex-wrap gap-3 text-sm text-slate-200">
+              <span className="rounded-full border border-white/10 bg-slate-900/80 px-4 py-2">
+                Defence Institute of Advanced Technology, Pune
+              </span>
+              <span className="rounded-full border border-white/10 bg-slate-900/80 px-4 py-2">
+                CGPA 8.18
+              </span>
+              <span className="rounded-full border border-white/10 bg-slate-900/80 px-4 py-2">
+                AI | ML | Computer Vision
+              </span>
+            </div>
 
-        {/* Description */}
-        <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
-          I specializes in React, TypeScript, and modern web technologies. I love creating intuitive user experiences and solving complex problems with clean, maintainable code.
-        </p>
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#projects"
+                className="inline-flex items-center justify-center rounded-full bg-blue-500 px-7 py-3 font-semibold text-white transition hover:bg-blue-400"
+              >
+                View Projects
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full border border-blue-300/40 px-7 py-3 font-semibold text-blue-200 transition hover:bg-blue-500/10"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a
-            href="#projects"
-            className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
-          >
-            View My Work <FaArrowRight />
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition duration-300"
-          >
-            Get In Touch
-          </a>
-        </div>
+          <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/80 p-6">
+            <h2 className="mb-6 text-2xl font-bold text-white">Quick Profile</h2>
+            <div className="space-y-4 text-slate-300">
+              <div className="flex items-start gap-3">
+                <FaPhone className="mt-1 text-blue-300" />
+                <div>
+                  <p className="text-sm uppercase tracking-wide text-slate-500">Phone</p>
+                  <p>+91 7599245115</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <FaEnvelope className="mt-1 text-blue-300" />
+                <div>
+                  <p className="text-sm uppercase tracking-wide text-slate-500">Email</p>
+                  <p>shivamswngar4321@gmail.com</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <FaMapMarkerAlt className="mt-1 text-blue-300" />
+                <div>
+                  <p className="text-sm uppercase tracking-wide text-slate-500">Location</p>
+                  <p>Aligarh, Uttar Pradesh, India</p>
+                </div>
+              </div>
+            </div>
 
-        {/* Social Links */}
-        <div className="flex justify-center gap-6 text-3xl">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-400 transition"
-            aria-label="GitHub"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-400 transition"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="mailto:your.email@example.com"
-            className="text-gray-400 hover:text-blue-400 transition"
-            aria-label="Email"
-          >
-            <FaEnvelope />
-          </a>
+            <div className="mt-8 grid grid-cols-2 gap-4">
+              <a
+                href="https://github.com/shivamsengar135"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 transition hover:border-blue-400 hover:text-blue-300"
+              >
+                <FaGithub /> GitHub
+              </a>
+              <a
+                href="#contact"
+                className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 transition hover:border-blue-400 hover:text-blue-300"
+              >
+                <FaLinkedin /> LinkedIn
+              </a>
+            </div>
+
+            <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+              <div className="rounded-2xl bg-blue-500/10 px-4 py-4">
+                <div className="text-3xl font-bold text-blue-300">4+</div>
+                <p className="mt-1 text-sm text-slate-400">Roles</p>
+              </div>
+              <div className="rounded-2xl bg-purple-500/10 px-4 py-4">
+                <div className="text-3xl font-bold text-purple-300">3</div>
+                <p className="mt-1 text-sm text-slate-400">Key Projects</p>
+              </div>
+              <div className="rounded-2xl bg-emerald-500/10 px-4 py-4">
+                <div className="text-3xl font-bold text-emerald-300">2</div>
+                <p className="mt-1 text-sm text-slate-400">Publications</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

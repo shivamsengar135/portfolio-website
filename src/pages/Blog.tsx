@@ -1,130 +1,95 @@
-import { FaCalendar, FaUser, FaArrowRight } from 'react-icons/fa'
+import { FaAward, FaBookOpen, FaMedal } from 'react-icons/fa'
+
+const publications = [
+  {
+    title: 'Classification of Urban Sound using Custom 1D and 2D CNN Architectures',
+    status: 'Published on 7 Jun 2025',
+    venue: 'International Journal for Research Trends and Innovation (IJRTI)',
+    detail: 'DOI: 10.56975/ijrti.v10i6.204539',
+  },
+  {
+    title: 'AI Incident Response Playbook Generator',
+    status: 'Accepted',
+    venue: 'IEEE IATMSI 2026',
+    detail: 'Conference date: 12-14 Mar 2026',
+  },
+]
+
+const achievements = [
+  '4th place in 5 km marathon in Jalandhar, Punjab (2014)',
+  '1st place in story telling competition (2015)',
+  '1st place in story telling competition (2016)',
+  'Received scholarship of INR 5000 for scoring 10 CGPA in class 10 (2016)',
+  '2nd place in Kho Kho at Spandan 2024',
+  '3rd place in Basketball, Volleyball, and Kabaddi at Spandan 2024',
+  'Volunteered in IEEE PuneCon International Conference at DIAT Pune (2024)',
+]
+
+const hobbies = ['Running', 'Basketball', 'Lawn Tennis']
 
 export default function Blog() {
-  const posts = [
-    {
-      id: 1,
-      title: 'Getting Started with React Hooks',
-      author: 'Shiva',
-      date: '2024-03-15',
-      excerpt: 'Learn how to use React Hooks to manage state and side effects in functional components. This comprehensive guide covers useState, useEffect, and custom hooks.',
-      category: 'React',
-      readTime: '8 min read'
-    },
-    {
-      id: 2,
-      title: 'TypeScript: Tips and Tricks',
-      author: 'Shiva',
-      date: '2024-03-10',
-      excerpt: 'Discover advanced TypeScript patterns and techniques to write safer, more maintainable code. Perfect for developers looking to level up their TypeScript skills.',
-      category: 'TypeScript',
-      readTime: '12 min read'
-    },
-    {
-      id: 3,
-      title: 'Building Scalable Node.js Applications',
-      author: 'Shiva',
-      date: '2024-03-05',
-      excerpt: 'Explore best practices for building scalable Node.js applications including architecture patterns, database optimization, and deployment strategies.',
-      category: 'Backend',
-      readTime: '15 min read'
-    },
-    {
-      id: 4,
-      title: 'Mastering Tailwind CSS',
-      author: 'Shiva',
-      date: '2024-02-28',
-      excerpt: 'A deep dive into Tailwind CSS utility-first approach. Learn how to build beautiful, responsive designs without leaving your HTML.',
-      category: 'CSS',
-      readTime: '10 min read'
-    },
-    {
-      id: 5,
-      title: 'Web Performance Optimization Guide',
-      author: 'Shiva',
-      date: '2024-02-20',
-      excerpt: 'Learn proven techniques to optimize your web applications for better performance. Includes code splitting, lazy loading, and caching strategies.',
-      category: 'Performance',
-      readTime: '14 min read'
-    },
-    {
-      id: 6,
-      title: 'Introduction to GraphQL',
-      author: 'Shiva',
-      date: '2024-02-10',
-      excerpt: 'Get started with GraphQL and learn why it\'s becoming the standard for API queries. Includes practical examples and best practices.',
-      category: 'GraphQL',
-      readTime: '11 min read'
-    }
-  ]
-
-  const getCategoryColor = (category: string) => {
-    const colors: Record<string, string> = {
-      'React': 'bg-blue-500',
-      'TypeScript': 'bg-purple-500',
-      'Backend': 'bg-green-500',
-      'CSS': 'bg-pink-500',
-      'Performance': 'bg-orange-500',
-      'GraphQL': 'bg-red-500'
-    }
-    return colors[category] || 'bg-gray-500'
-  }
-
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-          Blog
-        </h1>
-        <p className="text-gray-400 mb-12 text-lg">Articles about web development, JavaScript, React, and more</p>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {posts.map((post) => (
-            <article
-              key={post.id}
-              className="bg-gray-800 bg-opacity-50 rounded-lg p-6 border border-gray-700 hover:border-blue-400 transition group"
-            >
-              {/* Category Badge */}
-              <div className="mb-3">
-                <span className={`${getCategoryColor(post.category)} text-white text-xs font-bold px-3 py-1 rounded-full`}>
-                  {post.category}
-                </span>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition">
-                {post.title}
-              </h3>
-
-              {/* Meta Information */}
-              <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                <span className="flex items-center gap-1">
-                  <FaCalendar className="text-blue-400" />
-                  {new Date(post.date).toLocaleDateString()}
-                </span>
-                <span className="flex items-center gap-1">
-                  <FaUser className="text-blue-400" />
-                  {post.author}
-                </span>
-                <span>{post.readTime}</span>
-              </div>
-
-              {/* Excerpt */}
-              <p className="text-gray-300 mb-4 leading-relaxed">{post.excerpt}</p>
-
-              {/* Read More Link */}
-              <div className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition cursor-pointer">
-                Read More <FaArrowRight size={14} />
-              </div>
-            </article>
-          ))}
+    <section className="px-4 py-20">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Publications</p>
+          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Research, achievements, and beyond the classroom</h2>
+          <p className="text-lg leading-8 text-slate-300">
+            My academic journey includes published research, conference acceptance, competitive achievements, and active
+            participation in sports and volunteering.
+          </p>
         </div>
 
-        {/* Load More Button */}
-        <div className="text-center mt-12">
-          <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition duration-300">
-            Load More Articles
-          </button>
+        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+            <div className="mb-6 flex items-center gap-3">
+              <FaBookOpen className="text-2xl text-blue-300" />
+              <h3 className="text-2xl font-bold text-white">Publications and Acceptance</h3>
+            </div>
+            <div className="space-y-4">
+              {publications.map((item) => (
+                <article key={item.title} className="rounded-2xl border border-white/10 bg-slate-950/70 p-5">
+                  <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-blue-300">{item.status}</p>
+                  <h4 className="text-xl font-semibold text-white">{item.title}</h4>
+                  <p className="mt-2 text-slate-300">{item.venue}</p>
+                  <p className="mt-3 text-sm text-slate-400">{item.detail}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+              <div className="mb-6 flex items-center gap-3">
+                <FaMedal className="text-2xl text-purple-300" />
+                <h3 className="text-2xl font-bold text-white">Scholar Achievements</h3>
+              </div>
+              <ul className="space-y-3 text-slate-300">
+                {achievements.map((achievement) => (
+                  <li key={achievement} className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3">
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-amber-500/15 to-rose-500/10 p-6">
+              <div className="mb-5 flex items-center gap-3">
+                <FaAward className="text-2xl text-amber-300" />
+                <h3 className="text-2xl font-bold text-white">Hobbies</h3>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {hobbies.map((hobby) => (
+                  <span
+                    key={hobby}
+                    className="rounded-full border border-white/10 bg-slate-950/60 px-4 py-2 text-sm font-semibold text-slate-200"
+                  >
+                    {hobby}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

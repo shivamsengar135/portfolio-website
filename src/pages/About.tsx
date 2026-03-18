@@ -1,65 +1,96 @@
+const education = [
+  {
+    qualification: 'M.Tech CSE (Artificial Intelligence)',
+    institute: 'Defence Institute of Advanced Technology, Pune, Maharashtra',
+    year: '2023-25',
+    score: '8.18 CGPA',
+  },
+  {
+    qualification: 'B.Tech CSE',
+    institute: 'KMCLU, Lucknow, Uttar Pradesh',
+    year: '2019-23',
+    score: '9.24 CGPA',
+  },
+  {
+    qualification: '12th',
+    institute: 'Kendriya Vidyalaya, Aligarh, Uttar Pradesh',
+    year: '2018',
+    score: '72.2%',
+  },
+  {
+    qualification: '10th',
+    institute: 'Kendriya Vidyalaya, Lalgarh Jattan, Shriganganagar, Rajasthan',
+    year: '2016',
+    score: '10 CGPA',
+  },
+]
+
 export default function About() {
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
-          About Me
-        </h1>
+    <section className="px-4 py-20">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">About</p>
+          <h2 className="mb-5 text-4xl font-bold text-white md:text-5xl">Academic foundation with applied AI experience</h2>
+          <p className="text-lg leading-8 text-slate-300">
+            I am pursuing my M.Tech in Computer Science and Engineering with a specialization in Artificial
+            Intelligence at DIAT Pune, an autonomous institution under DU and DRDO. My work blends academic research,
+            practical engineering, teaching, and product development across AI, machine learning, backend systems,
+            and IoT.
+          </p>
+        </div>
 
-        <div className="grid gap-12 md:grid-cols-2">
-          <div className="space-y-6">
-            <p className="text-lg text-gray-300">
-              I&apos;m a passionate developer with a love for creating elegant solutions to complex problems. With 5+
-              years of experience in web development, I&apos;ve worked on diverse projects ranging from startups to
-              enterprise applications.
-            </p>
-
-            <p className="text-lg text-gray-300">
-              My journey in tech started with a curiosity about how things work. I started learning to code and never
-              looked back. I&apos;m constantly learning new technologies and best practices to stay at the forefront of
-              web development.
-            </p>
-
-            <p className="text-lg text-gray-300">
-              When I&apos;m not coding, you can find me contributing to open-source projects, writing technical blog
-              posts, or exploring new frameworks and tools.
-            </p>
-
-            <div className="pt-4">
-              <h3 className="mb-4 text-2xl font-bold text-blue-400">Key Highlights</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>[+] Full-stack web development</li>
-                <li>[+] React and TypeScript expertise</li>
-                <li>[+] RESTful API design</li>
-                <li>[+] Database design and optimization</li>
-                <li>[+] Cloud deployment with AWS and Vercel</li>
-                <li>[+] Team collaboration and mentoring</li>
-              </ul>
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+            <h3 className="mb-6 text-2xl font-bold text-white">Education</h3>
+            <div className="space-y-4">
+              {education.map((item) => (
+                <div key={item.qualification} className="rounded-2xl border border-white/10 bg-slate-950/70 p-5">
+                  <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                    <div>
+                      <h4 className="text-lg font-semibold text-white">{item.qualification}</h4>
+                      <p className="text-slate-300">{item.institute}</p>
+                    </div>
+                    <div className="text-sm text-slate-400 md:text-right">
+                      <p>{item.year}</p>
+                      <p className="font-semibold text-blue-300">{item.score}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="h-fit rounded-lg border border-gray-700 bg-gray-800/50 p-8">
-            <h3 className="mb-8 text-2xl font-bold text-blue-400">Stats</h3>
+          <div className="space-y-6">
+            <div className="rounded-[1.75rem] border border-white/10 bg-blue-500/10 p-6">
+              <h3 className="mb-4 text-2xl font-bold text-white">Current Focus</h3>
+              <ul className="space-y-3 text-slate-200">
+                <li>Real-time sound identification and classification</li>
+                <li>Computer vision systems for detection and monitoring</li>
+                <li>AI incident response and automation workflows</li>
+                <li>Applied machine learning for research and deployment</li>
+              </ul>
+            </div>
 
-            <div className="space-y-6">
-              <div>
-                <div className="text-4xl font-bold text-blue-400">5+</div>
-                <p className="text-gray-400">Years of Experience</p>
-              </div>
-
-              <div>
-                <div className="text-4xl font-bold text-purple-400">20+</div>
-                <p className="text-gray-400">Projects Completed</p>
-              </div>
-
-              <div>
-                <div className="text-4xl font-bold text-green-400">10+</div>
-                <p className="text-gray-400">Clients Worked With</p>
-              </div>
-
-              <div>
-                <div className="text-4xl font-bold text-pink-400">100%</div>
-                <p className="text-gray-400">Client Satisfaction</p>
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+              <h3 className="mb-4 text-2xl font-bold text-white">Highlights</h3>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl bg-slate-950/70 p-4">
+                  <div className="text-3xl font-bold text-blue-300">8.18</div>
+                  <p className="mt-1 text-slate-400">M.Tech CGPA</p>
+                </div>
+                <div className="rounded-2xl bg-slate-950/70 p-4">
+                  <div className="text-3xl font-bold text-purple-300">9.24</div>
+                  <p className="mt-1 text-slate-400">B.Tech CGPA</p>
+                </div>
+                <div className="rounded-2xl bg-slate-950/70 p-4">
+                  <div className="text-3xl font-bold text-emerald-300">1</div>
+                  <p className="mt-1 text-slate-400">Journal Publication</p>
+                </div>
+                <div className="rounded-2xl bg-slate-950/70 p-4">
+                  <div className="text-3xl font-bold text-amber-300">1</div>
+                  <p className="mt-1 text-slate-400">Conference Acceptance</p>
+                </div>
               </div>
             </div>
           </div>

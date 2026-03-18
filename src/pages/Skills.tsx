@@ -1,40 +1,65 @@
+const skillCategories = [
+  {
+    name: 'AI Skills',
+    skills: ['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'TensorFlow', 'Keras', 'Pandas', 'NumPy', 'Matplotlib'],
+  },
+  {
+    name: 'Programming',
+    skills: ['Python', 'Tkinter', 'PIL', 'CSV Handling', 'R', 'C++'],
+  },
+  {
+    name: 'Web Development',
+    skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress', 'CodeIgniter4'],
+  },
+  {
+    name: 'Tools and Platforms',
+    skills: ['MySQL', 'Visual Studio Code', 'RStudio', 'IoT', 'Unity', 'Blockchain', 'Solidity', 'Ganache'],
+  },
+]
+
+const courses = [
+  'Artificial Intelligence',
+  'Machine Learning',
+  'Deep Learning',
+  'Computer Vision',
+  'Natural Language Processing',
+  'Big Data',
+  'Software Engineering and System Modelling',
+  'IoT',
+  'Virtual Reality',
+  'Blockchain',
+  'Network and Cloud Security',
+  'DSA',
+  'Databases',
+  'Operating Systems',
+  'Computer Networks',
+  'Cloud Computing',
+  'Digital Image Processing',
+  'Cryptography',
+]
+
 export default function Skills() {
-  const skillCategories = [
-    {
-      name: 'Frontend',
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'React Router', 'State Management']
-    },
-    {
-      name: 'Backend',
-      skills: ['Node.js', 'Express', 'Python', 'SQL', 'RESTful APIs']
-    },
-    {
-      name: 'Tools & Platforms',
-      skills: ['Git', 'Docker', 'AWS', 'Vercel', 'GitHub Actions']
-    },
-    {
-      name: 'Databases',
-      skills: ['PostgreSQL', 'MongoDB', 'Firebase', 'Redis', 'GraphQL']
-    }
-  ]
-
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-          Skills & Expertise
-        </h1>
+    <section className="px-4 py-20">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Skills</p>
+          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Technical stack built through research and delivery</h2>
+          <p className="text-lg leading-8 text-slate-300">
+            My work spans AI, backend development, data analysis, and academic problem solving. I am most comfortable
+            building with Python-based ML workflows while also developing web systems and data-driven applications.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
           {skillCategories.map((category) => (
-            <div key={category.name} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 border border-gray-700 hover:border-blue-400 transition">
-              <h3 className="text-2xl font-bold text-blue-400 mb-6">{category.name}</h3>
-              
+            <div key={category.name} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+              <h3 className="mb-5 text-2xl font-bold text-white">{category.name}</h3>
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition"
+                    className="rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-100"
                   >
                     {skill}
                   </span>
@@ -44,31 +69,16 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Proficiency Section */}
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-blue-400 mb-8">Proficiency Levels</h2>
-          
-          <div className="space-y-6">
-            {[
-              { name: 'React & TypeScript', level: 95 },
-              { name: 'JavaScript', level: 95 },
-              { name: 'Tailwind CSS', level: 90 },
-              { name: 'Node.js & Express', level: 85 },
-              { name: 'Database Design', level: 85 },
-              { name: 'DevOps & Deployment', level: 80 }
-            ].map((skill) => (
-              <div key={skill.name}>
-                <div className="flex justify-between mb-2">
-                  <span className="font-semibold text-gray-300">{skill.name}</span>
-                  <span className="text-blue-400 font-bold">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div
-                    className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
+        <div className="mt-12 rounded-[1.75rem] border border-white/10 bg-slate-950/70 p-6">
+          <h3 className="mb-5 text-2xl font-bold text-white">Academic Courses</h3>
+          <div className="flex flex-wrap gap-3">
+            {courses.map((course) => (
+              <span
+                key={course}
+                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
+              >
+                {course}
+              </span>
             ))}
           </div>
         </div>
