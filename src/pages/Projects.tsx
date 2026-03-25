@@ -4,6 +4,21 @@ const defaultProjectLink = 'https://github.com/shivamsengar135?tab=repositories'
 
 const projects = [
   {
+    title: 'Django Project',
+    subtitle: 'Full-Stack Web Application',
+    period: '2026',
+    description:
+      'A Django-based deployed web application hosted on Render, focused on practical backend and web development workflows.',
+    points: [
+      'Built with Django and deployed to a production environment.',
+      'Includes core web features with backend integration and routing.',
+      'Source code is available publicly on GitHub for reference.',
+    ],
+    tags: ['Django', 'Python', 'Web Development', 'Render'],
+    link: 'https://django-project-1-5omj.onrender.com/',
+    githubLink: 'https://github.com/shivamsengar135/Django-project',
+  },
+  {
     title: 'Sound Identification and Classification in Real Time',
     subtitle: 'M.Tech Final Year Project',
     period: 'Dec 2024',
@@ -47,21 +62,6 @@ const projects = [
     tags: ['PHP', 'CodeIgniter3', 'MySQL', 'Bootstrap', 'Web Development'],
     link: defaultProjectLink,
     githubLink: '',
-  },
-  {
-    title: 'Django Project',
-    subtitle: 'Full-Stack Web Application',
-    period: '2026',
-    description:
-      'A Django-based deployed web application hosted on Render, focused on practical backend and web development workflows.',
-    points: [
-      'Built with Django and deployed to a production environment.',
-      'Includes core web features with backend integration and routing.',
-      'Source code is available publicly on GitHub for reference.',
-    ],
-    tags: ['Django', 'Python', 'Web Development', 'Render'],
-    link: 'https://django-project-1-5omj.onrender.com/',
-    githubLink: 'https://github.com/shivamsengar135/Django-project',
   },
 ]
 
