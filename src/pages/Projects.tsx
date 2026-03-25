@@ -1,3 +1,7 @@
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+
+const defaultProjectLink = 'https://github.com/shivamsengar135?tab=repositories'
+
 const projects = [
   {
     title: 'Sound Identification and Classification in Real Time',
@@ -11,6 +15,8 @@ const projects = [
       'Further enhancement under the supervision of Dr. Sunita Dhavale.',
     ],
     tags: ['Python', 'Deep Learning', 'UrbanSound8K', 'Audio Classification', 'AI'],
+    link: defaultProjectLink,
+    githubLink: '',
   },
   {
     title: 'SMACS IoT Project',
@@ -24,6 +30,8 @@ const projects = [
       'Designed for practical resource utilization and monitoring use cases.',
     ],
     tags: ['IoT', 'ThingSpeak', 'Python', 'Sensors', 'Data Visualization'],
+    link: defaultProjectLink,
+    githubLink: '',
   },
   {
     title: 'School Management System',
@@ -37,6 +45,23 @@ const projects = [
       'Aligned closely with real institutional workflow needs.',
     ],
     tags: ['PHP', 'CodeIgniter3', 'MySQL', 'Bootstrap', 'Web Development'],
+    link: defaultProjectLink,
+    githubLink: '',
+  },
+  {
+    title: 'Django Project',
+    subtitle: 'Full-Stack Web Application',
+    period: '2026',
+    description:
+      'A Django-based deployed web application hosted on Render, focused on practical backend and web development workflows.',
+    points: [
+      'Built with Django and deployed to a production environment.',
+      'Includes core web features with backend integration and routing.',
+      'Source code is available publicly on GitHub for reference.',
+    ],
+    tags: ['Django', 'Python', 'Web Development', 'Render'],
+    link: 'https://django-project-1-5omj.onrender.com/',
+    githubLink: 'https://github.com/shivamsengar135/Django-project',
   },
 ]
 
@@ -51,6 +76,14 @@ export default function Projects() {
             These projects reflect my work across real-time AI systems, connected devices, and full-stack software for
             practical use cases.
           </p>
+          <a
+            href={defaultProjectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-400/20"
+          >
+            View All Project Links <FaExternalLinkAlt />
+          </a>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -96,6 +129,27 @@ export default function Projects() {
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-400/20"
+                  >
+                    Live Demo <FaExternalLinkAlt />
+                  </a>
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-slate-300/30 bg-slate-500/10 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-slate-200 hover:bg-slate-500/20"
+                    >
+                      GitHub <FaGithub />
+                    </a>
+                  )}
                 </div>
               </div>
             </article>

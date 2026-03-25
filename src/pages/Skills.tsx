@@ -9,7 +9,7 @@ const skillCategories = [
   },
   {
     name: 'Web Development',
-    skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress', 'CodeIgniter4'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress', 'Django', 'CodeIgniter4'],
   },
   {
     name: 'Tools and Platforms',
