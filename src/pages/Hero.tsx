@@ -1,9 +1,8 @@
 import profilePhoto from '../assets/photo.jpg'
+import resumePdf from '../assets/Shivam_DIAT_Resume_7_April_26.pdf'
 import { FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 
 export default function Hero() {
-  const resumeUrl = `${import.meta.env.BASE_URL}Shivam_Sengar_Resume.txt`
-
   return (
     <section className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-16">
       <div className="w-full max-w-6xl">
@@ -16,9 +15,9 @@ export default function Hero() {
               Shivam Sengar
             </h1>
             <p className="mb-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
-              AI-focused engineer, educator, and developer with experience across machine learning, computer vision,
-              IoT, and backend systems. Currently pursuing M.Tech at DIAT Pune and working on real-world AI
-              applications including sound classification, detection systems, and incident-response automation.
+              AI/ML engineer and educator with hands-on experience in computer vision, RAG pipelines, and real-time
+              sound analytics. I combine research, teaching, and deployment-focused development to build practical AI
+              systems for production and academic use.
             </p>
 
             <div className="mb-8 flex flex-wrap gap-3 text-sm text-slate-200">
@@ -29,7 +28,7 @@ export default function Hero() {
                 CGPA 8.18
               </span>
               <span className="rounded-full border border-white/10 bg-slate-900/80 px-4 py-2">
-                AI | ML | Computer Vision
+                AI | ML | RAG | Computer Vision
               </span>
             </div>
 
@@ -41,8 +40,8 @@ export default function Hero() {
                 View Projects
               </a>
               <a
-                href={resumeUrl}
-                download
+                href={resumePdf}
+                download="Shivam_DIAT_Resume_7_April_26.pdf"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-500/10 px-7 py-3 font-semibold text-emerald-200 transition hover:bg-emerald-500/20"
               >
                 <FaDownload /> Download Resume
@@ -118,15 +117,15 @@ export default function Hero() {
             <div className="mt-8 grid grid-cols-3 gap-4 text-center">
               <div className="rounded-2xl bg-blue-500/10 px-4 py-4">
                 <div className="text-3xl font-bold text-blue-300">4+</div>
-                <p className="mt-1 text-sm text-slate-400">Roles</p>
+                <p className="mt-1 text-sm text-slate-400">Core Roles</p>
               </div>
               <div className="rounded-2xl bg-purple-500/10 px-4 py-4">
                 <div className="text-3xl font-bold text-purple-300">3</div>
-                <p className="mt-1 text-sm text-slate-400">Key Projects</p>
+                <p className="mt-1 text-sm text-slate-400">Highlighted Projects</p>
               </div>
               <div className="rounded-2xl bg-emerald-500/10 px-4 py-4">
                 <div className="text-3xl font-bold text-emerald-300">2</div>
-                <p className="mt-1 text-sm text-slate-400">Publications</p>
+                <p className="mt-1 text-sm text-slate-400">Research Milestones</p>
               </div>
             </div>
           </div>

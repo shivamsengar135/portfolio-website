@@ -4,24 +4,39 @@ const defaultProjectLink = 'https://github.com/shivamsengar135?tab=repositories'
 
 const projects = [
   {
-    title: 'Django Project',
-    subtitle: 'Full-Stack Web Application',
-    period: '2026',
+    title: 'Object Detection using YOLO with Django',
+    subtitle: 'Deployed Full-Stack AI Web Application',
+    period: '2025',
     description:
-      'A Django-based deployed web application hosted on Render, focused on practical backend and web development workflows.',
+      'Developed and deployed a production-ready Django application on Render for object detection workflows.',
     points: [
-      'Built with Django and deployed to a production environment.',
-      'Includes core web features with backend integration and routing.',
-      'Source code is available publicly on GitHub for reference.',
+      'Implemented core backend functionalities including routing, request handling, and web integration.',
+      'Designed live detection workflow with time-bound access behavior for practical demo use.',
+      'Source code is publicly available for collaboration and reference.',
     ],
-    tags: ['Django', 'Python', 'Web Development', 'Render'],
-    link: 'https://django-project-1-5omj.onrender.com/',
-    githubLink: 'https://github.com/shivamsengar135/Django-project',
+    tags: ['Django', 'YOLO', 'Computer Vision', 'Render', 'Python'],
+    link: 'https://object-detection-using-yolo-with-django.onrender.com/',
+    githubLink: 'https://github.com/shivamsengar135/Object-Detection-using-YOLO-with-Django',
+  },
+  {
+    title: 'Local RAG Pipeline',
+    subtitle: 'Retrieval-Augmented Generation with LangChain',
+    period: '2025',
+    description:
+      'Implemented a local Retrieval-Augmented Generation pipeline using LangChain for document-grounded responses.',
+    points: [
+      'Built retrieval and response generation flow for local knowledge sources.',
+      'Focused on practical RAG architecture and reliable context retrieval.',
+      'Code is available publicly on GitHub for extension and reuse.',
+    ],
+    tags: ['RAG', 'LangChain', 'LLM', 'Python', 'NLP'],
+    link: 'https://github.com/shivamsengar135/Local-RAG-Pipeline',
+    githubLink: 'https://github.com/shivamsengar135/Local-RAG-Pipeline',
   },
   {
     title: 'Sound Identification and Classification in Real Time',
-    subtitle: 'M.Tech Final Year Project',
-    period: 'Dec 2024',
+    subtitle: 'M.Tech Final Year AI Project',
+    period: '2025',
     description:
       'Processes live CCTV, video, or audio input to detect a defined sound class and count how many times it occurs in the raw audio stream.',
     points: [
@@ -29,38 +44,8 @@ const projects = [
       'Focused on real-time inference for sound-event monitoring and analysis.',
       'Further enhancement under the supervision of Dr. Sunita Dhavale.',
     ],
-    tags: ['Python', 'Deep Learning', 'UrbanSound8K', 'Audio Classification', 'AI'],
-    link: defaultProjectLink,
-    githubLink: '',
-  },
-  {
-    title: 'SMACS IoT Project',
-    subtitle: 'M.Tech 2nd Semester Mini Project',
-    period: 'Apr 2024',
-    description:
-      'Created a Smart Monitoring and Control System using IoT for real-time monitoring and efficient device control.',
-    points: [
-      'Integrated ThingSpeak for live monitoring and visualization.',
-      'Used Python, IoT sensors, and analytics workflows for data management.',
-      'Designed for practical resource utilization and monitoring use cases.',
-    ],
-    tags: ['IoT', 'ThingSpeak', 'Python', 'Sensors', 'Data Visualization'],
-    link: defaultProjectLink,
-    githubLink: '',
-  },
-  {
-    title: 'School Management System',
-    subtitle: 'B.Tech Final Year Project',
-    period: 'Apr 2024',
-    description:
-      'Developed a web platform to streamline administrative tasks for educational institutions.',
-    points: [
-      'Implemented student and teacher management, attendance tracking, and academic records.',
-      'Built with HTML, CSS, JavaScript, Bootstrap, PHP, CodeIgniter3, and MySQL.',
-      'Aligned closely with real institutional workflow needs.',
-    ],
-    tags: ['PHP', 'CodeIgniter3', 'MySQL', 'Bootstrap', 'Web Development'],
-    link: defaultProjectLink,
+    tags: ['Audio AI', 'Deep Learning', 'UrbanSound8K', 'Real-Time Inference', 'CCTV'],
+    link: 'https://doi.org/10.56975/ijrti.v10i6.204539',
     githubLink: '',
   },
 ]
@@ -71,10 +56,10 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 max-w-3xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Projects</p>
-          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Selected projects from AI, IoT, and web development</h2>
+          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Selected projects across AI deployment and research</h2>
           <p className="text-lg leading-8 text-slate-300">
-            These projects reflect my work across real-time AI systems, connected devices, and full-stack software for
-            practical use cases.
+            These projects reflect my work on real-world AI applications, including deployed computer vision systems,
+            LLM pipelines, and research-focused sound intelligence.
           </p>
           <a
             href={defaultProjectLink}

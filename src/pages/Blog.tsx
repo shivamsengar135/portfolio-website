@@ -9,7 +9,7 @@ const publications = [
   },
   {
     title: 'AI Incident Response Playbook Generator',
-    status: 'Accepted',
+    status: 'Accepted and Presented',
     venue: 'IEEE IATMSI 2026',
     detail: 'Conference date: 12-14 Mar 2026',
   },
@@ -44,7 +44,7 @@ export default function Blog() {
           <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
             <div className="mb-6 flex items-center gap-3">
               <FaBookOpen className="text-2xl text-blue-300" />
-              <h3 className="text-2xl font-bold text-white">Publications and Acceptance</h3>
+              <h3 className="text-2xl font-bold text-white">Publications and Conference Work</h3>
             </div>
             <div className="space-y-4">
               {publications.map((item) => (

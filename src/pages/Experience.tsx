@@ -1,9 +1,10 @@
 const experiences = [
   {
-    title: 'ML Engineer Trainee',
+    title: 'AI/ML Engineer Trainee',
     company: 'Upscalers Technology, Nasik, Maharashtra, India',
-    period: '12 Jan 2026 - Present',
-    description: 'Working on machine learning engineering tasks with a focus on applied AI workflows and model-driven solutions.',
+    period: '12 Jan 2025 - Present',
+    description:
+      'Built an object detection website with a Django backend and contributed to a Local RAG Pipeline using LangChain.',
   },
   {
     title: 'Assistant Professor Grade 1',
@@ -16,12 +17,6 @@ const experiences = [
     company: 'Defence Institute of Psychological Research, DRDO, New Delhi',
     period: 'Jul 2024 - Dec 2025',
     description: 'Worked on an LSRB-sponsored project involving banner detection, fire detection, face detection, head count, and collaboration with senior DRDO scientists.',
-  },
-  {
-    title: 'Backend Developer',
-    company: 'Founder Code Technology Pvt Ltd',
-    period: 'Dec 2022 - May 2023',
-    description: 'Built a school management system website to streamline student and teacher management, attendance tracking, and academic records.',
   },
 ]
 

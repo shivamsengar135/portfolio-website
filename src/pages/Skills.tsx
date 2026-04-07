@@ -1,19 +1,19 @@
 const skillCategories = [
   {
     name: 'AI Skills',
-    skills: ['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'TensorFlow', 'Keras', 'Pandas', 'NumPy', 'Matplotlib'],
+    skills: ['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'TensorFlow', 'Keras', 'Pandas', 'NumPy', 'Matplotlib', 'RAG', 'LangChain'],
   },
   {
-    name: 'Programming',
+    name: 'Programming Languages',
     skills: ['Python', 'Tkinter', 'PIL', 'CSV Handling', 'R', 'C++'],
   },
   {
     name: 'Web Development',
-    skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress', 'Django', 'CodeIgniter4'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Django', 'CodeIgniter4'],
   },
   {
-    name: 'Tools and Platforms',
-    skills: ['MySQL', 'Visual Studio Code', 'RStudio', 'IoT', 'Unity', 'Blockchain', 'Solidity', 'Ganache'],
+    name: 'Tools, Database, and Platforms',
+    skills: ['MySQL', 'Visual Studio Code', 'RStudio', 'PyCharm', 'Jupyter Notebook', 'IoT', 'Unity (VR/AR)', 'Blockchain', 'Solidity', 'Ganache'],
   },
 ]
 
@@ -29,10 +29,21 @@ const courses = [
   'Virtual Reality',
   'Blockchain',
   'Network and Cloud Security',
+  'C Programming',
   'DSA',
+  'Engineering Mathematics',
+  'Digital Logic',
+  'Computer Organization and Architecture',
+  'Algorithms',
+  'Compiler Design',
+  'Programming and Data Structures',
   'Databases',
+  'Discrete Mathematics',
   'Operating Systems',
   'Computer Networks',
+  'Software Engineering',
+  'Networking Technologies',
+  'Computer Graphics',
   'Cloud Computing',
   'Digital Image Processing',
   'Cryptography',
